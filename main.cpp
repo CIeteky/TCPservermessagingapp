@@ -1,10 +1,10 @@
 #include <QApplication>
-#include "mainwindow.h"
+#include "messagingclient.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
+    MessagingClient w;
     w.show();
     return a.exec();
 }
