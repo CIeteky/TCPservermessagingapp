@@ -8,18 +8,16 @@ SOURCES += \
     clienthandler.cpp \
     main.cpp \
     mainwindow.cpp \
-    clienthandler.cpp \
-    messagingclient.cpp
+    clienthandler.cpp
+ 
 
 HEADERS += \
     clienthandler.h \
     mainwindow.h \
-    clienthandler.h \
-    messagingclient.h
-
+    clienthandler.h 
 FORMS += \
-    mainwindow.ui \
-    messagingclient.ui
+    mainwindow.ui 
+
 
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
