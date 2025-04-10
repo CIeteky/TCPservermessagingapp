@@ -6,3 +6,4 @@ this is a project trying to set up a communication utilizing a TCP server
 # HOW IT WORKS
 Use the Messagingapp to create a server in a localhost or a specified host
 Use clients to connect to said host and chat 
+[Most up to date releases](https://github.com/CIeteky/TCPservermessagingapp/releases/tag/0.0.2)
