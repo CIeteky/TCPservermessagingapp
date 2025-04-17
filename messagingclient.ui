@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>MessagingClient</class>
+ <widget class="QMainWindow" name="MessagingClient">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,20 +11,34 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Qt Messaging Server</string>
+   <string>Qt Messaging Client</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
        <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Server:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="serverInput">
+        <property name="text">
+         <string>localhost</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_2">
         <property name="text">
          <string>Port:</string>
         </property>
        </widget>
       </item>
-      <item>
+      <item row="0" column="3">
        <widget class="QSpinBox" name="portSpinBox">
         <property name="minimum">
          <number>1024</number>
@@ -37,39 +51,40 @@
         </property>
        </widget>
       </item>
-      <item>
-       <widget class="QPushButton" name="startButton">
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_3">
         <property name="text">
-         <string>Start Server</string>
+         <string>Username:</string>
         </property>
        </widget>
       </item>
-      <item>
-       <widget class="QPushButton" name="stopButton">
-        <property name="text">
-         <string>Stop Server</string>
-        </property>
-       </widget>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="usernameInput"/>
       </item>
-      <item>
-       <spacer name="horizontalSpacer">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
+      <item row="1" column="2" colspan="2">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QPushButton" name="connectButton">
+          <property name="text">
+           <string>Connect</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="disconnectButton">
+          <property name="text">
+           <string>Disconnect</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>
     <item>
      <widget class="QLabel" name="statusLabel">
       <property name="text">
-       <string>Server is stopped</string>
+       <string>Disconnected</string>
       </property>
      </widget>
     </item>
@@ -81,16 +96,22 @@
      </widget>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QLineEdit" name="messageInput">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="placeholderText">
-         <string>Type a message to broadcast...</string>
+         <string>Type a message...</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="sendButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="text">
          <string>Send</string>
         </property>
