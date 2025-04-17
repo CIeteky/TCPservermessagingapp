@@ -7,3 +7,15 @@ this is a project trying to set up a communication utilizing a TCP server
 Use the Messagingapp to create a server in a localhost or a specified host
 Use clients to connect to said host and chat 
 [Most up to date releases](https://github.com/CIeteky/TCPservermessagingapp/releases/tag/0.0.2)
+# INSTALLATION GUIDE 
+**Linux**
+```
+git clone https://github.com/CIeteky/TCPservermessagingapp.git
+cd TCPservermessagingapp
+qmake
+make
+./MessagingApp
+```
+**Windows**
+Go to the [releases](https://github.com/CIeteky/TCPservermessagingapp/releases) page and download the latest release
+
