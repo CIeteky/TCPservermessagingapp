@@ -5,13 +5,11 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 CONFIG += c++11
 
 SOURCES += \
-    clienthandler.cpp \
     main.cpp \
     clienthandler.cpp \
     messagingclient.cpp
 
 HEADERS += \
-    clienthandler.h \
     clienthandler.h \
     messagingclient.h
 
