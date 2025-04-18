@@ -9,6 +9,8 @@ Use clients to connect to said host and chat
 [Most up to date releases](https://github.com/CIeteky/TCPservermessagingapp/releases/tag/0.0.2)
 # INSTALLATION GUIDE 
 **Linux**
+*before installation make sure to have qtbase5-dev installed, may have different names under different distributions*
+
 ```
 git clone https://github.com/CIeteky/TCPservermessagingapp.git
 cd TCPservermessagingapp
