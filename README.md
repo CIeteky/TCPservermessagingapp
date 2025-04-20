@@ -7,6 +7,30 @@ this is a project trying to set up a communication utilizing a TCP server
 Use the Messagingapp to create a server in a localhost or a specified host
 Use clients to connect to said host and chat 
 [Most up to date releases](https://github.com/CIeteky/TCPservermessagingapp/releases/tag/0.0.2)
+**Example code to try the functionality of your TCPserver**
+create a python file and run the following code:
+```
+import socket
+import time
+import random
+HOST = '192.168.0.106'  # your server's IP
+PORT = 8080         # port
+
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+    sock.connect((HOST, PORT))
+    print("Connected to server")
+
+    
+    sock.sendall(b"/name PythonClient\n")
+    time.sleep(0.5)
+
+    messages = ["Hello World", "If these messages pass through", "Your TCP server can accept input from python clients!"]
+    for msg in messages:
+        sock.sendall((msg + "\n").encode())
+        time.sleep(random.uniform(3, 7)) 
+
+    print("Messages sent.")
+```
 # INSTALLATION GUIDE 
 **Linux**
 *before installation make sure to have qtbase5-dev installed, may have different names under different distributions*
