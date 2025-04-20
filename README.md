@@ -13,8 +13,8 @@ create a python file and run the following code:
 import socket
 import time
 import random
-HOST = '192.168.0.106'  # your server's IP
-PORT = 8080         # port
+HOST = '1.1.1.1.1'  # your server's IP
+PORT = 6666         # port
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
     sock.connect((HOST, PORT))
