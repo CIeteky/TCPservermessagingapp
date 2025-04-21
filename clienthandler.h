@@ -27,6 +27,8 @@ private:
     int clientId;
     QTcpSocket *clientSocket;
     QString clientName;
+    QByteArray buffer;
+
 };
 
 #endif
