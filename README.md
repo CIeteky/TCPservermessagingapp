@@ -34,6 +34,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
 # INSTALLATION GUIDE 
 **Linux**
 *before installation make sure to have qtbase5-dev installed, may have different names under different distributions*
+**MAKE SURE YOUR SYSTEM IS NOT DEFAULTING TO qmake6 SINCE THIS PROJECT IS USING qmake5 THERE MIGHT BE ISSUES, IF YOU WANNA BE COMPLETELY SAFE CONSIDER RUNNING qmake5 INSTEAD OF qmake**
 
 ```
 git clone https://github.com/CIeteky/TCPservermessagingapp.git
